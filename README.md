@@ -7,5 +7,5 @@ Install [cookiecutter](https://github.com/audreyr/cookiecutter):
 
 Scaffold your project:
 ```
-cookiecutter http://git.telpa.com/gmobile/android-starter.git
+cookiecutter https://github.com/dtunctuncer/android_base_project.git
 ```
