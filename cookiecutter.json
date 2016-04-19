@@ -1,0 +1,9 @@
+{
+  "project_name": "android-project",
+  "repo_name": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+  "package_name": "com.dtunctuncer.{{ cookiecutter.project_name|lower|replace(' ', '')|replace('-', '') }}",
+  "description": "A short description of the project.",
+  "author": "Your Name",
+  "email": "developer@gmail.com",
+  "version" : "1.0.0"
+}

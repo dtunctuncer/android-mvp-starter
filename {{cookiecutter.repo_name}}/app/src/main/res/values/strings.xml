@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">{{ cookiecutter.project_name|replace('-', '')|replace('_', '')|title }}</string>
+    <string name="action_settings">Settings</string>
+</resources>
