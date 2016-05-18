@@ -5,5 +5,6 @@
   "description": "A short description of the project.",
   "author": "Your Name",
   "email": "developer@gmail.com",
-  "version" : "1.0.0"
+  "version" : "1.0.0",
+  "splash_screen" : "n"
 }

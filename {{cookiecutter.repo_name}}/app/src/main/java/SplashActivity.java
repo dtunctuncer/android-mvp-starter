@@ -9,7 +9,7 @@ import android.view.WindowManager;
 
 import {{ cookiecutter.package_name }}.R;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
 
     private static final long DURATION_TIME = 3000;
     AppCompatActivity activity;
