@@ -64,7 +64,8 @@ cookiecutter https://github.com/dtunctuncer/android-mvp-starter.git
 │       │   │               ├── di
 │       │   │               │   ├── ActivityScope.java
 │       │   │               │   ├── ApplicationComponent.java
-│       │   │               │   └── ApplicationModule.java
+│       │   │               │   ├── ApplicationModule.java
+│       │   │               │   └── NetModule.java
 │       │   │               ├── main
 │       │   │               │   ├── IMainView.java
 │       │   │               │   ├── MainActivity.java
@@ -121,7 +122,7 @@ cookiecutter https://github.com/dtunctuncer/android-mvp-starter.git
 ├── local.properties
 └── settings.gradle
 
-37 directories, 42 files
+37 directories, 43 files
 ```
 
 
