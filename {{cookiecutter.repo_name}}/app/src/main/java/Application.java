@@ -25,7 +25,7 @@ public class Application extends android.app.Application{
         //di
         component = DaggerApplicationComponent.builder().applicationModule(new ApplicationModule(this)).build();
 
-         //Crashlatics
+         //Crashlytics
         CrashlyticsCore core = new CrashlyticsCore.Builder()
                 .disabled(BuildConfig.DEBUG)
                 .build();
