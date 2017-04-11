@@ -1,6 +1,6 @@
 package {{ cookiecutter.package_name }}.splash;
 
-import {{ cookiecutter.package_name }}.MainActivity;
+import {{ cookiecutter.package_name }}.main.MainActivity;
 import {{ cookiecutter.package_name }}.base.BaseActivity;
 import android.content.Intent;
 import android.os.Bundle;

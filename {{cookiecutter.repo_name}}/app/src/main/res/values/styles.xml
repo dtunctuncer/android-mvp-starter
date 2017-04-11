@@ -14,7 +14,7 @@
     </style>
     {% if cookiecutter.splash_screen == "y" %}
     <style name="Splash" parent="Theme.AppCompat.Light.NoActionBar">
-         <item name="android:windowBackground">@drawable/android_starter</item>
+         <item name="android:windowBackground">@drawable/splash_logo</item>
     </style>
     {% endif %}
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
