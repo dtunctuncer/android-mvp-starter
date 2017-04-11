@@ -15,7 +15,7 @@ Picasso
 
 **You can choose which library you want to include in your project**
 
-![Terminal](http://imgur.com/8q8xQXA)
+![Terminal](http://i.imgur.com/8q8xQXA.png)
 
 ### Requirements
 
