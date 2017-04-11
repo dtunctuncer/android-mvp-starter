@@ -32,7 +32,7 @@ Picasso
 
 Scaffold your project:
 ```
-cookiecutter https://github.com/dtunctuncer/android-base-project.git
+cookiecutter https://github.com/dtunctuncer/android-mvp-starter.git
 ```
 
 ## License
