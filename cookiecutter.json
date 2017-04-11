@@ -6,5 +6,8 @@
   "author": "Your Name",
   "email": "developer@gmail.com",
   "version" : "1.0.0",
-  "splash_screen" : "n"
+  "splash_screen" : "n",
+  "retrofit" : "n",
+  "greendao" : "n",
+  "picasso" : "n"
 }

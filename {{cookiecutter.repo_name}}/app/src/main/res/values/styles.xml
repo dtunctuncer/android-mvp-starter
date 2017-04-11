@@ -12,7 +12,11 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
+    {% if cookiecutter.splash_screen == "y" %}
+    <style name="Splash" parent="Theme.AppCompat.Light.NoActionBar">
+         <item name="android:windowBackground">@drawable/android_starter</item>
+    </style>
+    {% endif %}
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

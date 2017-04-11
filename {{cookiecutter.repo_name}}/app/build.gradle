@@ -1,25 +1,47 @@
-apply plugin: 'com.android.application'
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
 
-def AppCompatVersion = '23.2.0'
-def DesignVersion = '23.2.1'
-def ButterKnifeVersion = '7.0.1'
-def RetroFitVersion = '2.0.1'
-def GsonVersion = '2.2.4'
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+{% if cookiecutter.greendao == "y" %}
+apply plugin: 'org.greenrobot.greendao'
+{% endif %}  
+
+def STRING = 'String'
+def BUILD_TIME = 'BUILD_TIME'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion "${rootProject.ext.buildToolsVersion}"
 
     defaultConfig {
         applicationId "{{ cookiecutter.package_name }}"
-        minSdkVersion 14
-        targetSdkVersion 23
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "{{ cookiecutter.version }}"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField STRING, BUILD_TIME, "\"${rootProject.ext.buildTime}\""
+
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -27,19 +49,55 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile "com.android.support:appcompat-v7:$AppCompatVersion"
-    compile "com.android.support:design:$DesignVersion"
-    compile "com.jakewharton:butterknife:$ButterKnifeVersion"
-    compile "com.google.code.gson:gson:$GsonVersion"
-    //compile "com.squareup.retrofit2:retrofit:$RetroFitVersion"
-    //compile "com.squareup.retrofit2:converter-gson:$RetroFitVersion"
-    compile 'com.mikepenz:google-material-typeface:2.2.0.1@aar'
-    compile 'com.mikepenz:fontawesome-typeface:4.4.0.1@aar'
-    compile 'com.mikepenz:octicons-typeface:3.0.0.1@aar'
-    compile('com.mikepenz:materialdrawer:5.2.0@aar') {
-        transitive = true
+    
+    //supportLib
+    compile rootProject.ext.supportLib
+    compile rootProject.ext.supportLibAppCompat
+    compile rootProject.ext.supportLibDesign
+    compile rootProject.ext.supportLibRecyclerview
+    compile rootProject.ext.supportLibCardview
+
+    //butterknife
+    compile rootProject.ext.butterKnife
+    apt rootProject.ext.butterKnifeAnnotation
+
+    //timber
+    compile rootProject.ext.timber
+
+    //crashlatics
+    compile (rootProject.ext.crashlatics){
+        transitive = true;
     }
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.android.support:support-v4:23.3.0'
+
+    //di
+    compile rootProject.ext.dagger
+    apt rootProject.ext.daggerApt
+    //compile rootProject.ext.daggerSupport
+    //annotationProcessor rootProject.ext.daggerAnnotation
+
+    //rx
+    compile rootProject.ext.rxJava
+    compile rootProject.ext.rxAndroid
+
+    {% if cookiecutter.retrofit == "y" %}
+    //retrofit
+    compile rootProject.ext.retrofit
+    compile rootProject.ext.okHttp
+    {% endif %}
+
+    {% if cookiecutter.greendao == "y" %}
+    //greenDao
+    compile rootProject.ext.greenDao
+    {% endif %}
+
+    {% if cookiecutter.picasso == "y" %}
+    //picasso
+    compile rootProject.ext.picasso
+    {% endif %}
+
+    testCompile 'junit:junit:4.12'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.google.code.findbugs'
+    })
 }
