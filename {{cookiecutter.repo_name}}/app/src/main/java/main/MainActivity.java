@@ -8,10 +8,6 @@ import butterknife.ButterKnife;
 import {{ cookiecutter.package_name }}.R;
 import {{ cookiecutter.package_name }}.base.BaseActivity;
 import {{ cookiecutter.package_name }}.Application;
-import {{ cookiecutter.package_name }}.main.DaggerMainComponent;
-import {{ cookiecutter.package_name }}.main.IMainView;
-import {{ cookiecutter.package_name }}.main.MainModule;
-import {{ cookiecutter.package_name }}.main.MainPresenter;
 
 import javax.inject.Inject;
 
