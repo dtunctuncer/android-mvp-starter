@@ -80,9 +80,12 @@ dependencies {
     compile rootProject.ext.rxAndroid
 
     {% if cookiecutter.retrofit == "y" %}
-    //retrofit
+    //net
     compile rootProject.ext.retrofit
     compile rootProject.ext.okHttp
+    compile rootProject.ext.gson
+    compile rootProject.ext.rxJavaAdapter
+    compile rootProject.ext.gsonConverter
     {% endif %}
 
     {% if cookiecutter.greendao == "y" %}

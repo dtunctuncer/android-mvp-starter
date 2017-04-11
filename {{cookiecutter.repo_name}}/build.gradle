@@ -34,6 +34,7 @@ ext{
     greenDaoVersion = '3.2.2'
     picassoVersion = '2.5.2'
     crashlyticsVersion = '2.6.7'
+    gsonVersion = '2.8.0'
 
     //supportLib
     supportLib = "com.android.support:support-v4:$supportLibVersion"
@@ -59,12 +60,15 @@ ext{
     //dagger
     dagger = "com.google.dagger:dagger-android:$daggerVersion"
     daggerSupport = "com.google.dagger:dagger-android-support:$daggerVersion" // if you use the support libraries
-    daggerAnnotation = "com.google.dagger:dagger-android-processor:$daggerVersion"
+    daggerAnnotation = "com.google.dagger:dagger-android-processor:$daggerVersion" //for annotationProcessor
     daggerApt = "com.google.dagger:dagger-compiler:$daggerVersion"
 
-    //retrofit
+    //net
     retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
     okHttp = "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    gson = "com.google.code.gson:gson:$gsonVersion"
+    rxJavaAdapter = "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+    gsonConverter = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 
     //greenDao
     greenDao = "org.greenrobot:greendao:$greenDaoVersion"

@@ -29,6 +29,9 @@ root_src_dir = os.path.join(project_dir,"app","src","main","java")
 if '{{ cookiecutter.splash_screen }}' != 'y':
     shutil.rmtree('splash')
 
+if '{{ cookiecutter.retrofit }}' != 'y':
+    os.remove('di/NetModule.java')
+
 base = os.path.join(root_src_dir,"base")
 di = os.path.join(root_src_dir,"di")
 splash = os.path.join(root_src_dir,"splash")
