@@ -17,13 +17,13 @@ Picasso
 
 ![Terminal](http://i.imgur.com/s9I2dxe.png)
 
-### Requirements
+#### Requirements
 
 [python](https://www.python.org/)  
 [pip](https://pypi.python.org/pypi/pip)  
 [cookiecutter](https://github.com/audreyr/cookiecutter)  
 
-
+#### Install
 ```
 1. Install python
 2. Install pip
@@ -34,6 +34,94 @@ Scaffold your project:
 ```
 cookiecutter https://github.com/dtunctuncer/android-mvp-starter.git
 ```
+
+
+##### Project Tree After Scaffold
+```
+.
+├── app
+│   ├── build.gradle
+│   ├── proguard-rules.pro
+│   └── src
+│       ├── androidTest
+│       │   └── java
+│       │       └── com
+│       │           └── dtunctuncer
+│       │               └── example
+│       │                   └── ApplicationTest.java
+│       ├── main
+│       │   ├── AndroidManifest.xml
+│       │   ├── java
+│       │   │   └── com
+│       │   │       └── dtunctuncer
+│       │   │           └── example
+│       │   │               ├── Application.java
+│       │   │               ├── base
+│       │   │               │   ├── BaseActivity.java
+│       │   │               │   └── IBaseView.java
+│       │   │               ├── di
+│       │   │               │   ├── ActivityScope.java
+│       │   │               │   ├── ApplicationComponent.java
+│       │   │               │   └── ApplicationModule.java
+│       │   │               ├── main
+│       │   │               │   ├── IMainView.java
+│       │   │               │   ├── MainActivity.java
+│       │   │               │   ├── MainComponent.java
+│       │   │               │   ├── MainModule.java
+│       │   │               │   └── MainPresenter.java
+│       │   │               ├── splash
+│       │   │               │   └── SplashActivity.java
+│       │   │               └── utils
+│       │   │                   ├── RxBus.java
+│       │   │                   └── timber
+│       │   │                       └── CrashReportTree.java
+│       │   └── res
+│       │       ├── drawable
+│       │       │   ├── android_starter.png
+│       │       │   └── splash_logo.xml
+│       │       ├── layout
+│       │       │   └── activity_main.xml
+│       │       ├── menu
+│       │       │   └── menu_main.xml
+│       │       ├── mipmap-hdpi
+│       │       │   └── ic_launcher.png
+│       │       ├── mipmap-mdpi
+│       │       │   └── ic_launcher.png
+│       │       ├── mipmap-xhdpi
+│       │       │   └── ic_launcher.png
+│       │       ├── mipmap-xxhdpi
+│       │       │   └── ic_launcher.png
+│       │       ├── mipmap-xxxhdpi
+│       │       │   └── ic_launcher.png
+│       │       ├── values
+│       │       │   ├── colors.xml
+│       │       │   ├── dimens.xml
+│       │       │   ├── strings.xml
+│       │       │   └── styles.xml
+│       │       ├── values-v21
+│       │       │   └── styles.xml
+│       │       └── values-w820dp
+│       │           └── dimens.xml
+│       └── test
+│           └── java
+│               └── com
+│                   └── dtunctuncer
+│                       └── example
+│                           └── ExampleUnitTest.java
+├── build.gradle
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+├── local.properties
+└── settings.gradle
+
+37 directories, 42 files
+```
+
 
 ## License
 
