@@ -64,10 +64,10 @@ ext{
 
     //retrofit
     retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
-    okHttp = "compile 'com.squareup.okhttp3:okhttp:$okHttpVersion"
+    okHttp = "com.squareup.okhttp3:okhttp:$okHttpVersion"
 
     //greenDao
-    greenDao = "compile 'org.greenrobot:greendao:$greenDaoVersion"
+    greenDao = "org.greenrobot:greendao:$greenDaoVersion"
 
     //picasso
     picasso = "com.squareup.picasso:picasso:$picassoVersion"
