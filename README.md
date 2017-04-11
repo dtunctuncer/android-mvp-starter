@@ -7,7 +7,7 @@ RxJava2
 RxAndroid
 Dagger2
 Butterknife
-Crashlatics
+Crashlytics
 Timber
 GreenDao
 Picasso

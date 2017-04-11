@@ -64,8 +64,8 @@ dependencies {
     //timber
     compile rootProject.ext.timber
 
-    //crashlatics
-    compile (rootProject.ext.crashlatics){
+    //crashlytics
+    compile (rootProject.ext.crashlytics){
         transitive = true;
     }
 
