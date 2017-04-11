@@ -11,6 +11,8 @@ Crashlatics
 Timber
 GreenDao
 Picasso
+Gson
+OkHttp
 ```
 
 **You can choose which library you want to include in your project**
