@@ -20,9 +20,9 @@ allprojects {
 ext{
 
     buildToolsVersion = '25.0.2'
-    compileSdkVersion = 25
-    targetSdkVersion = 25
-    minSdkVersion = 16
+    compileSdkVersion = {{ cookiecutter.target_sdk }}
+    targetSdkVersion = {{ cookiecutter.target_sdk }}
+    minSdkVersion = {{ cookiecutter.min_sdk }}
 
     supportLibVersion = '25.3.1'
     butterknifeVersion = '8.5.1'

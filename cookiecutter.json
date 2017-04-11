@@ -1,6 +1,8 @@
 {
   "project_name": "android-project",
   "repo_name": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+  "min_sdk" : 16,
+  "target_sdk" : 25,
   "package_name": "com.dtunctuncer.{{ cookiecutter.project_name|lower|replace(' ', '')|replace('-', '') }}",
   "description": "A short description of the project.",
   "author": "Your Name",
