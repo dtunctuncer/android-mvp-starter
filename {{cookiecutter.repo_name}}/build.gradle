@@ -7,7 +7,10 @@ buildscript {
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
         {% if cookiecutter.greendao == "y" %}
         classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
-        {% endif %}        
+        {% endif %}
+        {% if cookiecutter.realm == "y" %}
+        classpath "io.realm:realm-gradle-plugin:3.1.1"
+        {% endif %}
     }
 }
 

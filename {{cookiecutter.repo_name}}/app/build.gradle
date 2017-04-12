@@ -17,8 +17,10 @@ repositories {
 
 {% if cookiecutter.greendao == "y" %}
 apply plugin: 'org.greenrobot.greendao'
-{% endif %}  
-
+{% endif %}
+{% if cookiecutter.realm == "y" %}
+apply plugin: 'realm-android'
+{% endif %}
 def STRING = 'String'
 def BUILD_TIME = 'BUILD_TIME'
 

@@ -32,11 +32,20 @@ if '{{ cookiecutter.splash_screen }}' != 'y':
 if '{{ cookiecutter.retrofit }}' != 'y':
     os.remove('di/NetModule.java')
 
+if '{{ cookiecutter.database }}' != 'y':
+    os.remove('di/DatabaseModule.java')
+
+if '{{ cookiecutter.greendao }}' != 'y':
+    os.remove('utils/DaoMigrationHelper.java')
+    os.remove('utils/DaoUpdateHelper.java')
+    shutil.rmtree('db')
+
 base = os.path.join(root_src_dir,"base")
 di = os.path.join(root_src_dir,"di")
 splash = os.path.join(root_src_dir,"splash")
 utils = os.path.join(root_src_dir,"utils")
 main = os.path.join(root_src_dir,"main")
+db = os.path.join(root_src_dir,"db")
 
 shutil.move('Application.java',os.path.join(project_dir,"app","src","main","java",package_dir,"Application.java"))
 
@@ -61,5 +70,6 @@ moverecursively(base,root_dst_dir)
 moverecursively(di,root_dst_dir)
 moverecursively(utils,root_dst_dir)
 moverecursively(main,root_dst_dir)
+moverecursively(db,root_dst_dir)
 if '{{ cookiecutter.splash_screen }}' == 'y':
     moverecursively(splash,root_dst_dir)
