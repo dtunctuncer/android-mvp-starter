@@ -10,6 +10,7 @@ Butterknife
 Crashlytics
 Timber
 GreenDao
+Realm
 Picasso
 Gson
 OkHttp
@@ -17,7 +18,7 @@ OkHttp
 
 **You can choose which library you want to include in your project**
 
-![Terminal](http://i.imgur.com/s9I2dxe.png)
+![Terminal](http://i.imgur.com/dbGhGHW.png)
 
 #### Requirements
 
@@ -61,10 +62,13 @@ cookiecutter https://github.com/dtunctuncer/android-mvp-starter.git
 │       │   │               ├── base
 │       │   │               │   ├── BaseActivity.java
 │       │   │               │   └── IBaseView.java
+│       │   │               ├── db
+│       │   │               │   └── Example.java
 │       │   │               ├── di
 │       │   │               │   ├── ActivityScope.java
 │       │   │               │   ├── ApplicationComponent.java
 │       │   │               │   ├── ApplicationModule.java
+│       │   │               │   ├── DatabaseModule.java
 │       │   │               │   └── NetModule.java
 │       │   │               ├── main
 │       │   │               │   ├── IMainView.java
@@ -75,6 +79,8 @@ cookiecutter https://github.com/dtunctuncer/android-mvp-starter.git
 │       │   │               ├── splash
 │       │   │               │   └── SplashActivity.java
 │       │   │               └── utils
+│       │   │                   ├── DaoMigrationHelper.java
+│       │   │                   ├── DaoUpdateHelper.java
 │       │   │                   ├── RxBus.java
 │       │   │                   └── timber
 │       │   │                       └── CrashReportTree.java
@@ -122,7 +128,7 @@ cookiecutter https://github.com/dtunctuncer/android-mvp-starter.git
 ├── local.properties
 └── settings.gradle
 
-37 directories, 43 files
+38 directories, 47 files
 ```
 
 
