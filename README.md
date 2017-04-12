@@ -1,20 +1,21 @@
 # Android Starter
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-android--mvp--starter-brightgreen.svg?style=flat)](https://android-arsenal.com/details/3/5567)
+
 Android Starter is a starter project which implements MVP Pattern.  
+
 It includes libraries
-```
-RxJava2
-RxAndroid
-Dagger2
-Butterknife
-Crashlytics
-Timber
-GreenDao
-Realm
-Picasso
-Gson
-OkHttp
-```
+- [RxJava2](https://github.com/ReactiveX/RxJava) and [RxAndroid](https://github.com/ReactiveX/RxAndroid)
+- [Retrofit](http://square.github.io/retrofit/) / [OkHttp](http://square.github.io/okhttp/)
+- [Gson](https://github.com/google/gson)
+- [Dagger 2](http://google.github.io/dagger/)
+- [Butterknife](https://github.com/JakeWharton/butterknife)
+- [Timber](https://github.com/JakeWharton/timber)
+- [Espresso](https://google.github.io/android-testing-support-library/) for UI tests
+- [Crashlytics](https://try.crashlytics.com/)
+- [GreenDao](http://greenrobot.org/greendao/)
+- [Realm](https://realm.io/)
+- [Picasso](http://square.github.io/picasso/)
 
 **You can choose which library you want to include in your project**
 
@@ -40,7 +41,7 @@ cookiecutter https://github.com/dtunctuncer/android-mvp-starter.git
 
 
 ##### Project Tree After Scaffold
-```
+```bash
 .
 ├── app
 │   ├── build.gradle
