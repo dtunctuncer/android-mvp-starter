@@ -70,6 +70,9 @@ moverecursively(base,root_dst_dir)
 moverecursively(di,root_dst_dir)
 moverecursively(utils,root_dst_dir)
 moverecursively(main,root_dst_dir)
-moverecursively(db,root_dst_dir)
+
+if '{{ cookiecutter.database }}' == 'y' and '{{ cookiecutter.greendao }}' == 'y':
+    moverecursively(db,root_dst_dir)
+
 if '{{ cookiecutter.splash_screen }}' == 'y':
     moverecursively(splash,root_dst_dir)
