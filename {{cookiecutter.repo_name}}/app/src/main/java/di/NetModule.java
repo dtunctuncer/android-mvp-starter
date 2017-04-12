@@ -2,7 +2,9 @@ package {{ cookiecutter.package_name }}.di;
 
 
 import android.os.Environment;
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import java.util.concurrent.TimeUnit;
 import javax.inject.Singleton;
 import javax.inject.Named;
@@ -38,6 +40,14 @@ public class NetModule {
                 .readTimeout(1, TimeUnit.MINUTES)
                 .writeTimeout(1, TimeUnit.MINUTES)
                 .build();
+    }
+
+    @Provides
+    @Singleton
+    Gson provideGson() {
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES);
+        return gsonBuilder.create();
     }
 
     @Singleton
